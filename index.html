@@ -1,7 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranjal Rathore | Portfolio</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
 <body>
-<h1>Hello, this is my portfolio!</h1>
-<p>More coming soon 🚧</p>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Hi! I'm <span style="color:#4dabf7;">Pranjal Rathore</span> 👋</h1>
+    <p>Django Developer • Data Analyst • Graph Nerd</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate developer who loves building data-driven web apps,
+      visualizing graphs, and solving real-world problems using Python,
+      Django, and NetworkX. I enjoy creating tools that turn raw data
+      into insights and dashboards that help people make decisions.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>🌐 NetViz</h3>
+            <p>A network visualization tool built with Angular, Django, Cytoscape.js, and SQLite.  
+                Used to explore and interact with network graphs.</p>
+            <a class="btn" href="https://github.com/helios51193/NetViz" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>🔍 Document Search Engine</h3>
+            <p>Semantic search for documents using Django, Qdrant, HTMX, and SQLite.
+                Combines keyword and vector search for better relevance.</p>
+            <a class="btn" href="https://github.com/helios51193/document_search_engine" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>📺 TV Show Dashboard</h3>
+            <p>Data analytics project developed using streamlit analyzing animated TV shows:
+                ratings, longevity, episodes, and visual trends.</p>
+            <a class="btn" href="https://github.com/helios51193/tv-show-dashboard" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Add more project-card blocks here later -->
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Python, JavaScript, SQL, Cypher</p>
+    <p><strong>Frameworks:</strong> Django, FastApi, Streamlit, Angular </p>
+    <p><strong>Tools:</strong> NetworkX, Pandas, PostgreSQL, Docker, Celery, Reportlab, Memgraph, Qdrant, Jquery, HTMX, SqlAlchemy, Alembic, Jinja2, OpenAI, docker, docker-compose</p>
+</section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:pranjal51193@gmail.com">pranjal51193@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/helios51193">github.com/helios51193</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/pranjal-rathore</a></p>
+  </section>
+
+  <footer style="text-align:center;padding:15px;background:#f2f2f2;">
+    © <span id="year"></span> Pranjal Rathore
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
