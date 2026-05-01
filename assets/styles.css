@@ -1,9 +1,10 @@
-:root {
+﻿:root {
   --bg: #0f172a;
   --card: #111827;
   --text: #e5e7eb;
   --muted: #9ca3af;
   --accent: #38bdf8;
+  --accent-2: #0ea5e9;
   --border: #1f2933;
 }
 
@@ -28,6 +29,12 @@ body {
 a {
   color: var(--accent);
   text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 img {
@@ -58,7 +65,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* INTRO */
 .intro {
   display: grid;
   grid-template-columns: 1fr 160px;
@@ -66,9 +72,42 @@ h2 {
   align-items: center;
 }
 
+.intro-tagline {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
 .intro p {
   color: var(--muted);
-  max-width: 600px;
+  max-width: 640px;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.cta-btn {
+  background: var(--accent);
+  color: #0b1020;
+  padding: 0.55rem 0.95rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-1px);
+  background: var(--accent-2);
+}
+
+.cta-btn-secondary {
+  background: transparent;
+  color: var(--accent);
 }
 
 .photo {
@@ -85,7 +124,7 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-/* SKILLS */
+
 .skills-group {
   margin-bottom: 1.5rem;
 }
@@ -101,12 +140,7 @@ h2 {
   border: 1px solid var(--border);
   padding: 0.75rem;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .skill:hover {
@@ -114,11 +148,6 @@ h2 {
   border-color: var(--accent);
 }
 
-.skill i {
-  font-size: 1.6rem;
-}
-
-/* PROJECTS */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -130,9 +159,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1rem;
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .project:hover {
@@ -145,7 +172,19 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* CONTACT */
+.project-points {
+  margin: 0.85rem 0 1rem 1.1rem;
+  color: var(--muted);
+}
+
+.project-points li + li {
+  margin-top: 0.35rem;
+}
+
+.project-btn {
+  font-weight: 600;
+}
+
 .contact {
   background: var(--card);
   border: 1px solid var(--border);
@@ -158,7 +197,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   color: var(--muted);
@@ -174,5 +212,9 @@ footer {
 
   .photo {
     margin: auto;
+  }
+
+  .hero-cta {
+    justify-content: center;
   }
 }

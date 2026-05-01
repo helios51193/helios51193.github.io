@@ -1,46 +1,50 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pranjal Rathore | Portfolio</title>
+    <meta name="description" content="Portfolio of Pranjal Rathore, a Data Analyst and Backend Developer focused on Django, analytics systems, and scalable backend architecture." />
 
-    <!-- Devicon Icons -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- INTRODUCTION -->
     <section class="intro">
         <div>
             <h1>Pranjal Rathore</h1>
+            <p class="intro-tagline">Backend and Data Engineer building analytics platforms, search systems, and graph-powered applications.</p>
             <p>
                 Data Analyst and Backend Developer with strong experience in Django,
                 Network Analysis, and data-driven systems. I enjoy building analytical
                 tools, network-based insights, and scalable backend architectures.
             </p>
+            <div class="hero-cta">
+                <a class="cta-btn" href="assets/pranjal-rathore-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a class="cta-btn" href="mailto:pranjal51193@gmail.com">Email Me</a>
+                <a class="cta-btn cta-btn-secondary" href="https://github.com/helios51193" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="cta-btn cta-btn-secondary" href="https://www.linkedin.com/in/pranjal-rathore/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </div>
         <div class="photo">
           <img src="assets/self_image.jpeg" alt="Pranjal Rathore">
         </div>
     </section>
 
-    <!-- SKILLS -->
     <section>
         <h2>Skills</h2>
 
         <div class="skills-group">
             <h3>Languages</h3>
             <div class="skills-grid">
-                <div class="skill"></i>Python</div>
-                <div class="skill"></i>JavaScript</div>
-                <div class="skill"></i>HTML</div>
-                <div class="skill"></i>CSS</div>
-                <div class="skill"></i>SQL</div>
-                <div class="skill"></i>Cypher</div>
+                <div class="skill">Python</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Cypher</div>
             </div>
         </div>
 
@@ -50,7 +54,7 @@
                 <div class="skill">Django</div>
                 <div class="skill">Angular</div>
                 <div class="skill">Streamlit</div>
-                <div class="skill">FastApi</div>
+                <div class="skill">FastAPI</div>
             </div>
         </div>
 
@@ -62,7 +66,7 @@
                 <div class="skill">Redis</div>
                 <div class="skill">Docker</div>
                 <div class="skill">Git</div>
-                <div class="skill">Networkx</div>
+                <div class="skill">NetworkX</div>
                 <div class="skill">Memgraph</div>
                 <div class="skill">HTMX</div>
                 <div class="skill">SQLAlchemy</div>
@@ -71,65 +75,98 @@
         </div>
     </section>
 
-    <!-- PROJECTS -->
     <section>
         <h2>Projects</h2>
         <div class="projects">
             <div class="project">
+                <h3>NetworkX MCP Server</h3>
+                <p>
+                    An MCP server project that exposes NetworkX graph capabilities through tool-driven workflows for analysis and automation.
+                </p>
+                <ul class="project-points">
+                    <li>Problem: Running graph analysis from AI workflows needed a clean, reusable interface to NetworkX operations.</li>
+                    <li>Impact: Enabled graph construction, querying, and algorithmic analysis through MCP-compatible tooling.</li>
+                </ul>
+                <a class="project-btn" href="https://github.com/helios51193/networkx_mcp" target="_blank" rel="noopener noreferrer">View Project -></a>
+            </div>
+
+            <div class="project">
                 <h3>Multi-Agent Research Assistant</h3>
                 <p>
-                    Built a multi-agent research system with LangGraph that plans, retrieves, critiques, writes, and validates grounded answers with citations. 
+                    Built a multi-agent research system with LangGraph that plans, retrieves, critiques, writes, and validates grounded answers with citations.
                 </p>
-                <a class="project-btn" href="https://github.com/helios51193/multi-agent-research" target="_blank">View Project →</a>
+                <ul class="project-points">
+                    <li>Problem: Long-form research answers often hallucinate or miss sources.</li>
+                    <li>Impact: Added a critique and validation loop to improve grounded output quality and trust.</li>
+                </ul>
+                <a class="project-btn" href="https://github.com/helios51193/multi-agent-research" target="_blank" rel="noopener noreferrer">View Project -></a>
             </div>
+
+            <div class="project">
+                <h3>Stream Sight</h3>
+                <p>
+                    A real-time analytics system that ingests events, aggregates rolling time-window metrics using Redis buckets,
+                    and pushes updates via WebSockets.
+                </p>
+                <ul class="project-points">
+                    <li>Problem: Teams needed near real-time product metrics without heavy dashboard lag.</li>
+                    <li>Impact: Enabled low-latency live metric updates for faster operational decisions.</li>
+                </ul>
+                <a class="project-btn" href="https://github.com/helios51193/streamsight" target="_blank" rel="noopener noreferrer">View Project -></a>
+            </div>
+
             <div class="project">
                 <h3>Document Search Engine</h3>
                 <p>
                     Semantic search for documents using Django, Qdrant, HTMX, and SQLite.
                     Combines keyword and vector search for better relevance.
                 </p>
-                <a class="project-btn" href="https://github.com/helios51193/document_search_engine" target="_blank">View Project →</a>
+                <ul class="project-points">
+                    <li>Problem: Keyword-only search missed semantically related documents.</li>
+                    <li>Impact: Improved retrieval relevance by combining vector and lexical ranking.</li>
+                </ul>
+                <a class="project-btn" href="https://github.com/helios51193/document_search_engine" target="_blank" rel="noopener noreferrer">View Project -></a>
+            </div>
+
+            <div class="project">
+                <h3>Network Graph Explorer</h3>
+                <p>
+                    A network visualization tool built with Angular, Django, Cytoscape.js, and SQLite.
+                    Used to explore and interact with network graphs.
+                </p>
+                <ul class="project-points">
+                    <li>Problem: Relationship-heavy datasets were hard to interpret in tabular views.</li>
+                    <li>Impact: Made topology and node relationships easier to inspect through interactive graph exploration.</li>
+                </ul>
+                <a class="project-btn" href="https://github.com/helios51193/NetViz" target="_blank" rel="noopener noreferrer">View Project -></a>
             </div>
 
             <div class="project">
                 <h3>TV Show Dashboard</h3>
                 <p>
-                    Data analytics project developed using streamlit analyzing animated TV shows:
+                    Data analytics project developed using Streamlit analyzing animated TV shows:
                     ratings, longevity, episodes, and visual trends.
                 </p>
-                <a class="project-btn" href="https://github.com/helios51193/tv-show-dashboard" target="_blank">View Project →</a>
-            </div>
-            <div class="project">
-                <h3>Stream Sight</h3>
-                <p>
-                    A real-time analytics system that ingests events, aggregates rolling time-window metrics using Redis buckets, 
-                    and pushes updates via WebSockets.
-                </p>
-                <a class="project-btn" href="https://github.com/helios51193/streamsight" target="_blank">View Project →</a>
-            </div>
-            <div class="project">
-                <h3>Network Graph Explorer</h3>
-                <p>
-                    A network visualization tool built with Angular, Django, Cytoscape.js, and SQLite.  
-                Used to explore and interact with network graphs.
-                </p>
-                <a class="project-btn" href="https://github.com/helios51193/NetViz" target="_blank">View Project →</a>
+                <ul class="project-points">
+                    <li>Problem: Show performance trends were scattered across multiple sources and formats.</li>
+                    <li>Impact: Consolidated analysis into a single interactive dashboard for faster exploratory insights.</li>
+                </ul>
+                <a class="project-btn" href="https://github.com/helios51193/tv-show-dashboard" target="_blank" rel="noopener noreferrer">View Project -></a>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section>
         <h2>Contact Me</h2>
         <div class="contact">
             <p>Email: <a href="mailto:pranjal51193@gmail.com">pranjal51193@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/helios51193" target="_blank">github.com/helios51193</a></p>
-            <p>LinkedIn: <a href="#">https://www.linkedin.com/in/pranjal-rathore/</a></p>
+            <p>GitHub: <a href="https://github.com/helios51193" target="_blank" rel="noopener noreferrer">github.com/helios51193</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/pranjal-rathore/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pranjal-rathore</a></p>
         </div>
     </section>
 
     <footer>
-        © 2026 Pranjal Rathore
+        &copy; 2026 Pranjal Rathore
     </footer>
 
 </div>
